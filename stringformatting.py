@@ -1,0 +1,8 @@
+print("{1}{2}{0}".format(3,4,5))
+print(", ".join(["spam", "eggs", "ham"]))
+print("Hello ME".replace("ME", "world"))
+print("This is a sentence.".startswith("This"))
+print("This is a sentence.".endswith("sentence."))
+print("This is in all caps".upper())
+print("THIS IS ALL LOWERCASE".lower())
+print("spam, eggs, ham".split(", "))
