@@ -7,4 +7,4 @@ class Solution:
         ans = 0
 
         for i in range(len(s)):
-            if i 
+            if i in range
