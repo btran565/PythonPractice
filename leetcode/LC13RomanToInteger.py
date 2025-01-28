@@ -7,4 +7,4 @@ class Solution:
         ans = 0
 
         for i in range(len(s)):
-            if i in range
+            if i +1 < len(s) and roman[s[i]] < roman[s[i+1]]:
