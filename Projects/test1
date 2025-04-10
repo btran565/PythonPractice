@@ -1,0 +1,33 @@
+import requests
+from bs4 import BeautifulSoup
+
+def scrape_reddit(subreddit, num_posts=10):
+    url = f"https://www.reddit.com/r/{subreddit}/"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    
+    response = requests.get(url, headers=headers)
+    if response.status_code != 200:
+        print(f"Failed to fetch subreddit: {response.status_code}")
+        return []
+    
+    soup = BeautifulSoup(response.text, 'html.parser')
+    posts = []
+    
+    for post in soup.find_all('div', class_='Post', limit=num_posts):
+        title = post.find('h3')
+        if title:
+            posts.append(title.text)
+    
+    return posts
+
+if __name__ == "__main__":
+    subreddit = input("Enter the subreddit to scrape: ")
+    num_posts = int(input("Enter the number of posts to scrape: "))
+    scraped_posts = scrape_reddit(subreddit, num_posts)
+    
+    if scraped_posts:
+        print("\nTop Posts:")
+        for i, post in enumerate(scraped_posts, 1):
+            print(f"{i}. {post}")
+    else:
+        print("No posts found or failed to scrape.")
