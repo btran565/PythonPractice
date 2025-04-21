@@ -28,3 +28,5 @@ class Solution:
             else:
                 total += values[s[i]]
         return total
+    
+#needs to be studied further
