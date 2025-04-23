@@ -1,6 +1,14 @@
 p {
     color: blue;
 }
+p.introduction {
+    margin: 2px;
+    background-color: red
+}
 #latest { 
     background-color: yellow; 
   }
+
+.navigation { 
+    margin: 2px;
+}
