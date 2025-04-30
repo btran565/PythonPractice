@@ -3,4 +3,7 @@ p {
     font-family: 'Courier New', monospace;
     font-size: 12px;
     text-transform: uppercase;
+    text-decoration: underline blue solid 5px;
+    
+
 }
