@@ -16,11 +16,11 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
-h2 span {
+h2.span {
     color: #FA9F42;
     font-size: 0.75em;
 }
 #copyright {
     padding-top: 12px;
-    font-size: 0.75em;
+    font-size: .75em;
 }
