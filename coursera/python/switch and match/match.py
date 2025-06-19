@@ -6,3 +6,6 @@ match http_error:
         print("Bad Request")
     case 404:
         print("Not Found")
+    case _:
+        print("Unknown Error") #output not found
+    
