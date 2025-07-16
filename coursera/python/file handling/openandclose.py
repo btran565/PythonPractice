@@ -1,4 +1,7 @@
-file = open('sample.txt', mode = 'r')
+import os
+
+print(os.getcwd()) 
+file = open("sample.txt", mode = 'r')
 
 data = file.readline()
 
