@@ -12,4 +12,6 @@ p.introduction {
 .navigation { 
     margin: 2px;
 }
-
+span.navigation {
+    background-color: green;
+}
