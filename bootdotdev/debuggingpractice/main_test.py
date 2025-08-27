@@ -13,7 +13,7 @@ submit_cases = run_cases + [
 ]
 
 
-def test(input1, input2, input3, input4, expected_output):
+def test(input1, input2, input3, input4, expected_output):  #test takes 4 input args and expected output
     print("---------------------------------")
     print(f"Inputs: {input1}, {input2}, {input3}, {input4}")
     result = take_magic_damage(input1, input2, input3, input4)
