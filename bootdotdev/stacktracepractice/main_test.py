@@ -1,4 +1,5 @@
 from main import *
+from stacktracepractice.main import create_stats_message
 
 run_cases = [
     (1, 2, 3, "You have 1 strength, 2 wisdom, and 3 dexterity for a total of 6 stats."),
