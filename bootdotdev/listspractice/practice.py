@@ -7,7 +7,9 @@ def get_inventory():
 
 def test():
     inventory = get_inventory()
+    length = len(get_inventory())
     print(f"Inventory contains: {inventory}")
+    print(f"Size of list:  {length}")
     print("=====================================")
 
 
