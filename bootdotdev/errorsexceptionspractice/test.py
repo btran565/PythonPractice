@@ -1,8 +1,11 @@
 def main():
-    print(get_player_record(1))
-    print(get_player_record(2))
-    print(get_player_record(3))
-    print(get_player_record(4))
+    try:
+        print(get_player_record(1))
+        print(get_player_record(2))
+        print(get_player_record(3))
+        print(get_player_record(4))
+    except Exception as e:
+        print(f"Error: {e}")
 
 
 # Don't edit below this line
