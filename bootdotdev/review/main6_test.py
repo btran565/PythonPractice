@@ -1,4 +1,4 @@
-from main import *
+from main6 import *
 
 run_cases = [
     ([6, 8, 10], 2, [3.0, 4.0, 5.0]),
