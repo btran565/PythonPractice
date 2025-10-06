@@ -15,3 +15,32 @@ The * character is a wildcard that matches anything. If you're trying to find fi
 
 # Find all filenames that contain the word "chad"
 find some_directory -name "*chad*"
+
+Assignment
+There seems to be a suspicious script in the worldbanc/private/bin directory called genids.sh. It looks like it generates some type of identifier... First, let's remove our ability to run it, just to see what happens. The chmod command has a convenient -x flag that will simply remove the executable permission from the file.
+
+Run the following commands in worldbanc/private/bin:
+chmod -x genids.sh
+
+Let's test those permission changes. Try to run the script:
+./genids.sh
+
+You should get an error like this:
+
+permission denied
+
+That error occurs because the executable permission has been removed. Let's re-add the executable permission for the owner:
+chmod u+x <filename>
+
+Once you've done that, try running the ./genids.sh script again.
+Paste the output of the script into the input field and submit your answer.
+
+Tips
+You'll frequently download scripts from the internet to run on your machine, and often you'll need to make them executable before you can run them. I use chmod +x quite often as a developer.
+
+The internet is a shady place. Only run verified scripts from trusted publishers and authors.
+
+
+
+
+
