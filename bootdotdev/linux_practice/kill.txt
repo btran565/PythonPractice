@@ -1,0 +1,31 @@
+Kill
+Sometimes a program is in such a bad state (or is so malicious) that it doesn't respond to the SIGINT, in which case the best option is to use another shell session (new terminal window) to manually kill the program.
+
+Syntax
+kill <PID>
+
+PID stands for "process ID". Every process that's running on your machine has a unique ID. The ps, "process status" command can be used to list the processes running on your machine, and their IDs:
+
+ps aux
+
+The "aux" options just mean "show all processes, including those owned by other users, and show extra information about each process".
+
+Assignment
+You did some digging and found out that the malicious program actually has another mode: "force".
+
+Run the program again in force mode:
+./malicious.sh force
+
+Try to kill the program using CTRL+C. You shouldn't be able to kill it. Copy the line that was printed to your terminal when trying to kill the malicious program with ctrl+c. Paste it into the input field, but do not submit yet.
+
+Open a second terminal window and pipe (this thing: |) the output of ps aux into grep malicious.sh to find the process ID of the malicious program.
+
+You will probably get 2 results: one for the malicious program, and one for the grep command itself. Make sure you use the correct PID, and that you don't miss any characters. You don't want to accidentally kill a system-critical process.
+
+Once you have the PID (it should just be the first number in the line, e.g. "93838") kill it:
+kill <PID>
+
+Once you've killed the program, you should see your original terminal window return to a new prompt because it stopped running the malicious program.
+Now that you have control of the terminal again, submit the message the malicious program printed when you tried to terminate it with Ctrl+C, which you should've copied already in step 2.
+Tip
+Run ps aux | head -n 1 to see the header row of the ps aux table.
