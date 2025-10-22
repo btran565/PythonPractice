@@ -1,0 +1,52 @@
+Package Managers
+A package manager is a software tool that helps you install other software. Its primary functions include:
+
+Downloading software from official sources
+Installing software
+Updating software
+Removing software
+Managing dependencies
+As a developer, you'll frequently use package managers to get access to the software you need to get your work done.
+
+APT (Ubuntu)
+APT, or "Advanced Package Tool", is the primary package manager for Ubuntu. To be fair, you can use other package managers on Ubuntu, but APT is the default and most common.
+
+If you're on WSL and Ubuntu, you'll be using APT. If you're on another Linux setup, I pray you already know what package manager you're using. If you're on WSL or Ubuntu, check to make sure you have APT installed by running the following command:
+
+apt --version
+
+Brew (macOS)
+There isn't a "default" package manager for macOS. The most popular (but unofficial) package manager is Homebrew.
+
+If you're on macOS, and you don't have Homebrew installed, you can install it by running the following command:
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+See the Homebrew site for more information if needed.
+
+Assignment
+Let's install something! Neovim is a hyperextensible (and newer) version of Vim, which is a "new" version of Vi, which is a popular command line text editor.
+
+WSL/Ubuntu Instructions
+First, make sure that apt itself is up to date and will install the latest version of Neovim. Run the following command:
+
+sudo apt update
+
+This command only upgrades apt, it doesn't upgrade anything else.
+
+Next, install Neovim:
+
+sudo apt install neovim
+
+macOS Instructions
+If you're using Homebrew, on Mac, you can install Neovim by running the following command:
+
+brew install neovim
+
+Other Installation Methods
+If the above methods don't work, you can try other installation methods.
+
+Check Installation
+Let's make sure we installed it properly. Check your version:
+
+nvim --version
