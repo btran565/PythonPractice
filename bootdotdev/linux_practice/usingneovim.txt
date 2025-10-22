@@ -1,0 +1,26 @@
+Using Neovim
+This isn't a course on Neovim (we'd need at least 420 more lessons for that), but let's at least figure out how to edit a file and exit the program.
+
+Don't be fooled, exiting Vim (or Neovim) is one of the greatest hurdles you must overcome as a developer. It's a rite of passage. It's a badge of honor.
+
+
+
+Assignment
+There's a public file containing a company password!
+
+Use Neovim to open the worldbanc/public/company_info.md file.
+It's a text file that's using markdown syntax. You can open a file with Neovim by passing in the file path as an argument:
+
+nvim FILEPATH_HERE
+
+Once it's open, you might notice that you can't type anything. That's because you're in "normal" mode, the mode for navigating and manipulating text.
+
+Use the arrow keys (I know, Vim sacrilege) to move your cursor down to the last line.
+Enter "insert" mode by pressing the i key. You should see -- INSERT -- appear at the bottom of the screen.
+You should now be able to delete the password. Replace just the password with the text "REDACTED" in all caps, no quotes.
+When you're done, press the esc key to return to normal mode.
+Then type :w and press enter to save your changes.
+Finally, type :q and press enter to quit Neovim.
+You've successfully edited a file (and escaped from) Neovim!
+
+Use cat to view the contents of the edited file. Paste the contents into the input field and submit it
